@@ -1,22 +1,15 @@
 import React, { memo } from "react";
 import styled from "styled-components";
 
+import ColorPicker from "./color-picker";
+
 export default memo(({clientY, clientX, showTooltip, setColor}) => (
   <Popup {...{clientY, clientX, showTooltip}}>
-  {
-    ['yellow', 'red', 'green'].map(color =>
-      <ColorPicker
-        key={color}
-        onClick={() => setColor(color)}
-        {...{color, setColor}}
-        ></ColorPicker>
-    )
-  }
+    <ColorPicker onColorChange={setColor} />
   </Popup>
 ))
 
 const Popup = styled.div.attrs({bgColor: 'rgba(180,180,180,.9)', offsetX: 60, offsetY: 80})`
-  display: flex;
   transition: opacity .2s ease-in-out;
   opacity: ${({showTooltip})=> showTooltip ? 1 : 0};
   pointer-events: ${({showTooltip})=> showTooltip ? 'all' : 'none'};
@@ -41,12 +34,4 @@ const Popup = styled.div.attrs({bgColor: 'rgba(180,180,180,.9)', offsetX: 60, of
     border-width: 10px;
     margin-left: -10px;
   }
-`;
-
-const ColorPicker = styled.div`
-  width: 30px;
-  height: 30px;
-  margin: 5px;
-  border-radius: 10px;
-  background-color: ${({color}) => color};
 `;
