@@ -1,13 +1,13 @@
 {
-  "main.css": "/waes-assigment/static/css/main.91ae55f5.chunk.css",
-  "main.js": "/waes-assigment/static/js/main.e612f2fc.chunk.js",
-  "main.js.map": "/waes-assigment/static/js/main.e612f2fc.chunk.js.map",
-  "static/js/1.0c7baaa6.chunk.js": "/waes-assigment/static/js/1.0c7baaa6.chunk.js",
-  "static/js/1.0c7baaa6.chunk.js.map": "/waes-assigment/static/js/1.0c7baaa6.chunk.js.map",
-  "runtime~main.js": "/waes-assigment/static/js/runtime~main.c4feb4d8.js",
-  "runtime~main.js.map": "/waes-assigment/static/js/runtime~main.c4feb4d8.js.map",
-  "static/css/main.91ae55f5.chunk.css.map": "/waes-assigment/static/css/main.91ae55f5.chunk.css.map",
-  "index.html": "/waes-assigment/index.html",
-  "precache-manifest.418f17d9178a0bb2a4a84194f885379d.js": "/waes-assigment/precache-manifest.418f17d9178a0bb2a4a84194f885379d.js",
-  "service-worker.js": "/waes-assigment/service-worker.js"
+  "main.css": "/waes-assignment/static/css/main.91ae55f5.chunk.css",
+  "main.js": "/waes-assignment/static/js/main.e612f2fc.chunk.js",
+  "main.js.map": "/waes-assignment/static/js/main.e612f2fc.chunk.js.map",
+  "static/js/1.51ea9f5d.chunk.js": "/waes-assignment/static/js/1.51ea9f5d.chunk.js",
+  "static/js/1.51ea9f5d.chunk.js.map": "/waes-assignment/static/js/1.51ea9f5d.chunk.js.map",
+  "runtime~main.js": "/waes-assignment/static/js/runtime~main.caf010dc.js",
+  "runtime~main.js.map": "/waes-assignment/static/js/runtime~main.caf010dc.js.map",
+  "static/css/main.91ae55f5.chunk.css.map": "/waes-assignment/static/css/main.91ae55f5.chunk.css.map",
+  "index.html": "/waes-assignment/index.html",
+  "precache-manifest.9697c4c6c39ce22f7f705d26332e54a8.js": "/waes-assignment/precache-manifest.9697c4c6c39ce22f7f705d26332e54a8.js",
+  "service-worker.js": "/waes-assignment/service-worker.js"
 }
