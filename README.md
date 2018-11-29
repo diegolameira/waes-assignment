@@ -15,6 +15,10 @@ npm start
 npm test
 ```
 
+## TODOs
+
+- [ ] Unit tests
+
 ## Built With
 
 * [ReactJS](https://reactjs.org/) - The user interface library used
