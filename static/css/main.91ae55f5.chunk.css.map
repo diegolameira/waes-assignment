@@ -1,0 +1,1 @@
+{"version":3,"sources":["/home/dlameira/Desktop/Waes/waes-assignment/src/styles.css"],"names":[],"mappings":"AAAA,EAAI,qBAAsB,CAAE,AAE5B,KACE,SAAU,AACV,sBAAwB,CACzB,AAED,kBAAyB,eAAoB,CAAE","file":"main.91ae55f5.chunk.css","sourcesContent":["* { box-sizing: border-box }\n\nbody {\n  margin: 0;\n  font-family: sans-serif;\n}\n\nh1, h2, h3, h4, h5, h6 { font-weight: normal; }\n"]}
