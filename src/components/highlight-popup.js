@@ -1,0 +1,52 @@
+import React, { memo } from "react";
+import styled from "styled-components";
+
+export default memo(({clientY, clientX, showTooltip, setColor}) => (
+  <Popup {...{clientY, clientX, showTooltip}}>
+  {
+    ['yellow', 'red', 'green'].map(color =>
+      <ColorPicker
+        key={color}
+        onClick={() => setColor(color)}
+        {...{color, setColor}}
+        ></ColorPicker>
+    )
+  }
+  </Popup>
+))
+
+const Popup = styled.div.attrs({bgColor: 'rgba(180,180,180,.9)', offsetX: 60, offsetY: 80})`
+  display: flex;
+  transition: opacity .2s ease-in-out;
+  opacity: ${({showTooltip})=> showTooltip ? 1 : 0};
+  pointer-events: ${({showTooltip})=> showTooltip ? 'all' : 'none'};
+  padding: 10px;
+  position: absolute;
+  top: ${({clientY, offsetY}) => clientY - offsetY}px;
+  left: ${({clientX, offsetX}) => clientX - offsetX}px;
+  background-color: ${({bgColor})=>bgColor};
+  border-radius: 10px;
+
+  /* bottom arrow */
+  &:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-top-color: ${({bgColor})=>bgColor};
+    border-width: 10px;
+    margin-left: -10px;
+  }
+`;
+
+const ColorPicker = styled.div`
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border-radius: 10px;
+  background-color: ${({color}) => color};
+`;
