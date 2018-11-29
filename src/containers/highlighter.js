@@ -26,17 +26,29 @@ export default class extends PureComponent {
     range.deleteContents();
     range.insertNode(highlightSpan);
 
+    const currentHighlight = { range, string: range.toString(), color: this.state.latestColor };
+
     this.setState(({highlights, latestColor}) => ({
-      highlights: [...highlights, { range, string: range.toString(), color: latestColor }],
+      highlights: [...highlights, currentHighlight],
       clientX, clientY, showTooltip: true,
-      setColor: color => this.setColor(highlightSpan, color)
+      setColor: color => this.setColor(highlightSpan, color, currentHighlight)
     }));
 
   }
 
-  setColor = (elm, color) => {
-    this.setState({
-      latestColor: color
+  // TODO: it can be used for old ones too =) but needs some more efforts
+  setColor = (elm, color, highlight) => {
+    // Replace highlight color and span background
+    this.setState(({highlights}) => {
+      const index = highlights.indexOf(highlight);
+      return ({
+        highlights: [
+          ...highlights.slice(0, index),
+          {...highlight, color},
+          ...highlights.slice(index + 1)
+        ],
+        latestColor: color
+      })
     }, () => elm.setAttribute('style', `background-color: ${color};`))
   }
 
