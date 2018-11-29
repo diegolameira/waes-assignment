@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "e612f2fc11b47bb9a466",
+    "revision": "ac439418a77c4d0697c7",
     "url": "/waes-assignment/static/css/main.91ae55f5.chunk.css"
   },
   {
-    "revision": "e612f2fc11b47bb9a466",
-    "url": "/waes-assignment/static/js/main.e612f2fc.chunk.js"
+    "revision": "ac439418a77c4d0697c7",
+    "url": "/waes-assignment/static/js/main.ac439418.chunk.js"
   },
   {
     "revision": "51ea9f5dea4cbf8a21c3",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/waes-assignment/static/js/runtime~main.caf010dc.js"
   },
   {
-    "revision": "c4bb2a684f7bfdf2f8316ea3ebdb447b",
+    "revision": "20130464cf0c12b151a8e1daa0b0af76",
     "url": "/waes-assignment/index.html"
   }
 ];
