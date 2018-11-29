@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 
 import Main from "../components/main";
+import Sidebar from "../components/sidebar";
 import Popup from "../components/highlight-popup";
 import Highlighter from "../containers/highlighter";
 
@@ -11,8 +12,9 @@ export default class extends PureComponent {
         {({highlights, onMouseUp, clientX, clientY, showTooltip, setColor}) => (
         <>
           <div onMouseUp={onMouseUp}>
-            <Main {...data} />
+            <Main {...data} hasSidebar={highlights.length} />
           </div>
+          <Sidebar {...{highlights}} />
           <Popup {...{clientX, clientY, showTooltip, setColor }} />
         </>
         )}
