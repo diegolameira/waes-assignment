@@ -40,7 +40,7 @@ export default class extends PureComponent {
   setColor = (elm, color, highlight) => {
     // Replace highlight color and span background
     this.setState(({highlights}) => {
-      const index = highlights.indexOf(highlight);
+      const index = highlights.findIndex(({range}) => range === highlight.range);
       return ({
         highlights: [
           ...highlights.slice(0, index),
