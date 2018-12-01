@@ -25,7 +25,8 @@
     "react-scripts": "2.1.1"
   },
   "devDependencies": {
-    "@olavoparno/jest-badges-readme": "^1.2.4"
+    "@olavoparno/jest-badges-readme": "^1.2.4",
+    "styled-components": "^4.1.2"
   },
   "browserslist": [
     ">0.2%",
