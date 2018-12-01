@@ -2,7 +2,6 @@
   "name": "waes-assignment",
   "version": "1.0.0",
   "description": "User interaction (Text highlighter and filter)",
-  "homepage": "http://diegolameira.github.io/waes-assignment",
   "keywords": [
     "WAES",
     "Assignment",
@@ -12,25 +11,46 @@
   "main": "src/index.js",
   "scripts": {
     "start": "react-scripts start",
+    "make-badges": "node_modules/.bin/jest-badges-readme || true",
+    "make-readme": "npm run test && npm run make-badges",
+    "prebuild": "echo false > .buildstatus",
+    "postbuild": "echo true > .buildstatus && npm run make-readme",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "test": "react-scripts test --env=jsdom --coverage || true",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "react": "16.6.3",
     "react-dom": "16.6.3",
-    "react-scripts": "2.1.1",
-    "styled-components": "^4.1.2"
+    "react-scripts": "2.1.1"
   },
   "devDependencies": {
-    "gh-pages": "^2.0.1"
+    "@olavoparno/jest-badges-readme": "^1.2.4"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/path/to/dir/"
+    ],
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 95,
+        "lines": 95,
+        "statements": 95
+      }
+    }
+  }
 }
